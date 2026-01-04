@@ -22,7 +22,7 @@ export default function VideoRAGAgent() {
     setLoading(true);
 
     try {
-      const { data } = aawait axios.post(
+      const { data } = await axios.post(
   "https://ragytbackend-production-37b6.up.railway.app/ingest",
   { video_id: videoId },
   {
