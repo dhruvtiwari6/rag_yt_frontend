@@ -22,10 +22,15 @@ export default function VideoRAGAgent() {
     setLoading(true);
 
     try {
-      const { data } = await axios.post(
-        `${process.env.NEXT_PUBLIC_API_URL}/ingest`,
-        { video_id: videoId }
-      );
+      const { data } = aawait axios.post(
+  "https://ragytbackend-production-37b6.up.railway.app/ingest",
+  { video_id: videoId },
+  {
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }
+);
 
       if (data.status === "success") {
         setMessages([
