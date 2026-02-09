@@ -23,7 +23,7 @@ export default function VideoRAGAgent() {
 
     try {
       const { data } = await axios.post(
-  "https://apiragyt.dhruv-tiwari.me/ingest",
+  `${process.env.NEXT_PUBLIC_API_URL}/ingest`,
   { video_id: videoId },
   {
     headers: {
